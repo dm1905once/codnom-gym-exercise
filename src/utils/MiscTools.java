@@ -11,7 +11,7 @@ public class MiscTools {
         Random random = new Random();
         StringBuilder sb = new StringBuilder(length);
         for (int i = 0; i < length; i++ ){
-            sb.append(ALPHABET_US_EN.charAt(random.nextInt(length)));
+            sb.append(ALPHABET_US_EN.charAt(random.nextInt(ALPHABET_US_EN.length())));
         }
         return sb.toString();
     }
