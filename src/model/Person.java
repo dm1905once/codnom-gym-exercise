@@ -6,8 +6,8 @@ import java.time.LocalDate;
 
 public class Person {
 
-    // Required parameters
     protected String id;
+    // Required parameters
     protected String authLevel;
     protected String nameFirst;
     protected String nameLast;
@@ -65,6 +65,6 @@ public class Person {
 
     @Override
     public String toString(){
-        return nameFirst + " " + nameLast + " has " + authLevel + " access and has been assigned identifier: " + id;
+        return nameFirst + " " + nameLast + " has " + authLevel + " access and has been assigned identifier: " + id + " address1 is " + address1;
     }
 }

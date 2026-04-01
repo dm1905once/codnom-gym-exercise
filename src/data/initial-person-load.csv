@@ -1,1 +1,3 @@
-Type,Name,Address,City
+Type,FirstName,LastName,DOB(yyyyMMdd),Address1,Address2,City,DateJoined(yyyyMMdd)
+ADMIN,Alex,Agave,19981225,9901 Evergreen St.,,Springfield,
+MEMBER,Berta,Babas,20060916,,,Calle Rayón # 325,San Juan,20210104

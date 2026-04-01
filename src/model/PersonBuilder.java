@@ -5,6 +5,7 @@ import utils.MiscTools;
 import java.time.LocalDate;
 
 public class PersonBuilder {
+
     protected String id;
     protected String authLevel;
     protected String nameFirst;
@@ -18,7 +19,6 @@ public class PersonBuilder {
     protected LocalDate dateJoined;
 
     public PersonBuilder(String authLevel, String nameFirst, String nameLast, LocalDate dateBirth) {
-        this.id = "asdf";
         this.authLevel = authLevel;
         this.nameFirst = nameFirst;
         this.nameLast = nameLast;
