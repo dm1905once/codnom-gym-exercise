@@ -1,4 +1,4 @@
 Type,FirstName,LastName,DOB(yyyyMMdd),Address1,Address2,City,DateJoined(yyyyMMdd)
 ADMIN,Alex,Agave,19981225,9901 Evergreen St.,,Springfield,
 MEMBER,Berta,Babas,20060916,Calle Rayón # 325,Depto 1B,San Juan,20210104
-MEMBER,Carlos,Way,19990303,,,,
+MEMBER,,Way,19990303,,,,

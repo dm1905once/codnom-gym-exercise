@@ -17,7 +17,7 @@ public class PersonMaintenance {
         try {
             initialPersonLoad(personSourceFilePath);
         } catch (IOException e) {
-            System.out.println("Issues loading source file");
+            System.out.println("Issues loading source file or invalid record");
         }
 
     }
@@ -30,11 +30,13 @@ public class PersonMaintenance {
                 String[] fields = record.split(",", -1);
 
                 if (fields[0].isEmpty() || fields[1].isEmpty() || fields[2].isEmpty() || fields[3].isEmpty()) {
-                    throw (new IOException("At least one mandatory field is missing"));
+                    throw (new IOException());
                 }
+
                 System.out.println("Creating person ...");
                 PersonBuilder builder;
                 builder = new PersonBuilder(fields[0], fields[1], fields[2], fields[3]);
+
                 // Optional parameters:
                 //Optional.ofNullable(fields[4]).ifPresent(builder::setAddress1);
                 if (!fields[4].isEmpty()) {
