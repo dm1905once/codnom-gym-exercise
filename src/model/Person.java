@@ -25,6 +25,10 @@ public class Person {
         this.nameFirst = builder.nameFirst;
         this.nameLast = builder.nameLast;
         this.dateBirth = builder.dateBirth;
+        this.address1 = builder.address1;
+        this.address2 = builder.address2;
+        this.addressCity = builder.addressCity;
+        this.dateJoined = builder.dateJoined;
     }
 
     public String getId() {

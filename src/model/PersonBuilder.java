@@ -18,11 +18,11 @@ public class PersonBuilder {
     protected String addressCity;
     protected LocalDate dateJoined;
 
-    public PersonBuilder(String authLevel, String nameFirst, String nameLast, LocalDate dateBirth) {
+    public PersonBuilder(String authLevel, String nameFirst, String nameLast, String dateBirth) {
         this.authLevel = authLevel;
         this.nameFirst = nameFirst;
         this.nameLast = nameLast;
-        this.dateBirth = dateBirth;
+        this.dateBirth = LocalDate.of(Integer.parseInt(dateBirth.substring(0, 3)), Integer.parseInt(dateBirth.substring(4, 6)), Integer.parseInt(dateBirth.substring(6, 8)));
         this.id = switch (authLevel){
             case "ADMIN"    -> "A" + MiscTools.getRandomString(7);
             case "MEMBER"   -> "M" + MiscTools.getRandomString(11);
@@ -66,13 +66,13 @@ public class PersonBuilder {
         return this;
     }
 
-    public PersonBuilder setDateBirth(LocalDate dateBirth) {
-        this.dateBirth = dateBirth;
+    public PersonBuilder setDateBirth(String dateBirth) {
+        this.dateBirth = LocalDate.of(Integer.parseInt(dateBirth.substring(0, 3)), Integer.parseInt(dateBirth.substring(4, 6)), Integer.parseInt(dateBirth.substring(6, 8)));
         return this;
     }
 
-    public PersonBuilder setDateJoined(LocalDate dateJoined) {
-        this.dateJoined = dateJoined;
+    public PersonBuilder setDateJoined(String dateJoined) {
+        this.dateJoined = LocalDate.of(Integer.parseInt(dateJoined.substring(0, 3)), Integer.parseInt(dateJoined.substring(4, 6)), Integer.parseInt(dateJoined.substring(6, 8)));;
         return this;
     }
 
